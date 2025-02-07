@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Image Gallery</title>
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            margin: 20px 0;
+            color: #333;
+            font-size: 2.5rem;
+            font-weight: bold;
+            position: relative;
+        }
+        h1::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 10px;
+            background: repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 10px,
+                #333 10px,
+                #333 20px
+            );
+            margin-top: 10px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+        .card-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        footer {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div class="gallery">
+        <!-- Dynamically add 14 cards -->
+        <div class="card">
+            <img src="img/1.jpg" alt="Nature Landscape">
+            <div class="card-content">
+                <div class="card-description">A serene landscape with rolling hills.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/2.jpg" alt="Mountain View">
+            <div class="card-content">
+                <div class="card-description">Majestic mountains covered in snow.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/3.jpg" alt="Sunset Over Ocean">
+            <div class="card-content">
+                <div class="card-description">A breathtaking sunset over the ocean.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/4.jpg" alt="Forest Path">
+            <div class="card-content">
+                <div class="card-description">A peaceful path through a lush forest.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/5.jpg" alt="City Skyline">
+            <div class="card-content">
+                <div class="card-description">The vibrant skyline of a bustling city.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/6.jpg" alt="Waterfall">
+            <div class="card-content">
+                <div class="card-description">A powerful waterfall cascading into a pool.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/7.jpg" alt="Desert Dunes">
+            <div class="card-content">
+                <div class="card-description">Golden sand dunes stretching endlessly.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/8.jpg" alt="Autumn Leaves">
+            <div class="card-content">
+                <div class="card-description">Vibrant autumn leaves carpeting the ground.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/9.jpg" alt="Beach Waves">
+            <div class="card-content">
+                <div class="card-description">Waves gently lapping at the sandy shore.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/10.jpg" alt="Snowy Forest">
+            <div class="card-content">
+                <div class="card-description">A quiet forest blanketed in fresh snow.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/11.jpg" alt="Rainbow Over Hills">
+            <div class="card-content">
+                <div class="card-description">A rainbow arching over green hills.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/12.jpg" alt="Lighthouse">
+            <div class="card-content">
+                <div class="card-description">A historic lighthouse standing tall by the sea.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/13.jpg" alt="Night Sky">
+            <div class="card-content">
+                <div class="card-description">A starry night sky filled with constellations.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/14.jpg" alt="Countryside Farm">
+            <div class="card-content">
+                <div class="card-description">A picturesque countryside farm at sunrise.</div>
+            </div>
+        </div>
+    </div>
+    <footer class="relative bg-blueGray-200 pt-8 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap text-left lg:text-left">
+                <div class="w-full lg:w-6/12 px-4">
+                    <h4 class="text-3xl font-semibold text-blueGray-700">Let's keep in touch!</h4>
+                    <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+                        Find us on any of these platforms, we respond 1-2 business days.
+                    </h5>
+                    <div class="mt-6 lg:mb-0 mb-6">
+                        <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                            <i class="fab fa-facebook-square"></i>
+                        </button>
+                        <button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                            <i class="fab fa-instagram"></i>
+                        </button>
+                        <button class="bg-white text-red-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                            <i class="fab fa-youtube"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap items-top mb-6">
+                        <div class="w-full lg:w-4/12 px-4 ml-auto">
+                            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Contact Info</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <p class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">Talk: 9656 359 111</p>
+                                </li>
+                                <li>
+                                    <p class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">Talk: 9447 394 111</p>
+                                </li>
+                                <li>
+                                    <p class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">Email: wayanadbeehive@gmail.com</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Meet Us</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <p class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">Karapuzha, Meenagadi</p>
+                                </li>
+                                <li>
+                                    <p class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">Wayanad, Kerala</p>
+                                </li>
+                                <li>
+                                    <p class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm">ABR SOLAR, Meenagadi, Wayanad</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-blueGray-300">
+            <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm text-blueGray-500 font-semibold py-1">
+                        Copyright © <span id="get-current-year">2025</span> Image Gallery | Created by robin
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
